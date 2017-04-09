@@ -1,37 +1,26 @@
-// Copyright (c) Microsoft. All rights reserved.
-// Licensed under the MIT license. See LICENSE file in the project root for full license information.
-
+/*! Copyright (c) Microsoft. All rights reserved.
+ *! Licensed under the MIT license. See LICENSE file in the project root for full license information.
+ */
 'use strict';
-
-var apiVersion = '2016-11-14';
-
+exports.apiVersion = '2016-11-14';
 function devicePath(id) {
-  return '/devices/' + id;
+    return '/devices/' + id;
 }
-
+exports.devicePath = devicePath;
 function eventPath(id) {
-  return devicePath(id) + '/messages/events';
+    return devicePath(id) + '/messages/events';
 }
-
+exports.eventPath = eventPath;
 function messagePath(id) {
-  return devicePath(id) + '/messages/devicebound';
+    return devicePath(id) + '/messages/devicebound';
 }
-
+exports.messagePath = messagePath;
 function feedbackPath(id, lockToken) {
-  return messagePath(id) + '/' + lockToken;
+    return messagePath(id) + '/' + lockToken;
 }
-
+exports.feedbackPath = feedbackPath;
 function versionQueryString() {
-  return '?api-version=' + apiVersion;
+    return '?api-version=' + exports.apiVersion;
 }
-
-var endpoint = {
-  devicePath: devicePath,
-  eventPath: eventPath,
-  messagePath: messagePath,
-  feedbackPath: feedbackPath,
-  versionQueryString: versionQueryString,
-  apiVersion: apiVersion
-};
-
-module.exports = endpoint;
+exports.versionQueryString = versionQueryString;
+//# sourceMappingURL=endpoint.js.map

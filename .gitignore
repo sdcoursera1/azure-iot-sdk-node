@@ -196,3 +196,6 @@ $RECYCLE.BIN/
 **/.vscode/**
 # C/C++ extension for VS Code
 .browse.VC.db*
+
+# Typescript
+**/*.js.map

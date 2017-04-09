@@ -4,12 +4,12 @@
 import { EventEmitter } from 'events';
 
 export { anHourFromNow, encodeUriComponentStrict } from './lib/authorization';
-export import ConnectionString = require('./lib/connection_string');
+export import { ConnectionString } from './lib/connection_string';
 export import endpoint = require('./lib/endpoint');
 export import errors = require('./lib/errors');
 export import results = require('./lib/results');
-export import Message = require('./lib/message');
-export import SharedAccessSignature = require('./lib/shared_access_signature');
+export import { Message } from './lib/message';
+export import { SharedAccessSignature } from './lib/shared_access_signature';
 
 // Typescript only, used by other modules in azure-iot-sdk
 export interface X509 {

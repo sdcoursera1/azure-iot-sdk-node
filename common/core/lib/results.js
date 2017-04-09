@@ -1,8 +1,7 @@
-// Copyright (c) Microsoft. All rights reserved.
-// Licensed under the MIT license. See LICENSE file in the project root for full license information.
-
+/*! Copyright (c) Microsoft. All rights reserved.
+ *! Licensed under the MIT license. See LICENSE file in the project root for full license information.
+ */
 'use strict';
-
 /**
  * @class       module:azure-iot-common.MessageEnqueued
  * @classdesc   Result returned when a message was successfully enqueued.
@@ -11,10 +10,13 @@
  *
  * @augments {Object}
  */
-function MessageEnqueued(transportObj) {
-  this.transportObj = transportObj;
-}
-
+var MessageEnqueued = (function () {
+    function MessageEnqueued(transportObj) {
+        this.transportObj = transportObj;
+    }
+    return MessageEnqueued;
+}());
+exports.MessageEnqueued = MessageEnqueued;
 /**
  * @class       module:azure-iot-common.MessageCompleted
  * @classdesc   Result returned when a message was successfully rejected.
@@ -23,10 +25,13 @@ function MessageEnqueued(transportObj) {
  *
  * @augments {Object}
  */
-function MessageCompleted(transportObj) {
-  this.transportObj = transportObj;
-}
-
+var MessageCompleted = (function () {
+    function MessageCompleted(transportObj) {
+        this.transportObj = transportObj;
+    }
+    return MessageCompleted;
+}());
+exports.MessageCompleted = MessageCompleted;
 /**
  * @class       module:azure-iot-common.MessageRejected
  * @classdesc   Result returned when a message was successfully rejected.
@@ -35,10 +40,13 @@ function MessageCompleted(transportObj) {
  *
  * @augments {Object}
  */
-function MessageRejected(transportObj) {
-  this.transportObj = transportObj;
-}
-
+var MessageRejected = (function () {
+    function MessageRejected(transportObj) {
+        this.transportObj = transportObj;
+    }
+    return MessageRejected;
+}());
+exports.MessageRejected = MessageRejected;
 /**
  * @class       module:azure-iot-common.MessageAbandoned
  * @classdesc   Result returned when a message was successfully abandoned.
@@ -47,10 +55,13 @@ function MessageRejected(transportObj) {
  *
  * @augments {Object}
  */
-function MessageAbandoned(transportObj) {
-  this.transportObj = transportObj;
-}
-
+var MessageAbandoned = (function () {
+    function MessageAbandoned(transportObj) {
+        this.transportObj = transportObj;
+    }
+    return MessageAbandoned;
+}());
+exports.MessageAbandoned = MessageAbandoned;
 /**
  * @class       module:azure-iot-common.Connected
  * @classdesc   Result returned when a transport is successfully connected.
@@ -59,10 +70,13 @@ function MessageAbandoned(transportObj) {
  *
  * @augments {Object}
  */
-function Connected(transportObj) {
-  this.transportObj = transportObj;
-}
-
+var Connected = (function () {
+    function Connected(transportObj) {
+        this.transportObj = transportObj;
+    }
+    return Connected;
+}());
+exports.Connected = Connected;
 /**
  * @class       module:azure-iot-common.Disconnected
  * @classdesc   Result returned when a transport is successfully disconnected.
@@ -72,11 +86,14 @@ function Connected(transportObj) {
  *
  * @augments {Object}
  */
-function Disconnected(transportObj, reason) {
-  this.transportObj = transportObj;
-  this.reason = reason;
-}
-
+var Disconnected = (function () {
+    function Disconnected(transportObj, reason) {
+        this.transportObj = transportObj;
+        this.reason = reason;
+    }
+    return Disconnected;
+}());
+exports.Disconnected = Disconnected;
 /**
  * @class       module:azure-iot-common.TransportConfigured
  * @classdesc   Result returned when a transport is successfully configured.
@@ -85,10 +102,13 @@ function Disconnected(transportObj, reason) {
  *
  * @augments {Object}
  */
-function TransportConfigured(transportObj) {
-  this.transportObj = transportObj;
-}
-
+var TransportConfigured = (function () {
+    function TransportConfigured(transportObj) {
+        this.transportObj = transportObj;
+    }
+    return TransportConfigured;
+}());
+exports.TransportConfigured = TransportConfigured;
 /**
  * @class       module:azure-iot-common.SharedAccessSignatureUpdated
  * @classdesc   Result returned when a SAS token has been successfully updated.
@@ -97,17 +117,11 @@ function TransportConfigured(transportObj) {
  *
  * @augments {Object}
  */
-function SharedAccessSignatureUpdated(needToReconnect) {
-  this.needToReconnect = needToReconnect;
-}
-
-module.exports = {
-  MessageEnqueued: MessageEnqueued,
-  MessageCompleted: MessageCompleted,
-  MessageRejected: MessageRejected,
-  MessageAbandoned: MessageAbandoned,
-  Connected: Connected,
-  Disconnected: Disconnected,
-  TransportConfigured: TransportConfigured,
-  SharedAccessSignatureUpdated: SharedAccessSignatureUpdated
-};
+var SharedAccessSignatureUpdated = (function () {
+    function SharedAccessSignatureUpdated(needToReconnect) {
+        this.needToReconnect = needToReconnect;
+    }
+    return SharedAccessSignatureUpdated;
+}());
+exports.SharedAccessSignatureUpdated = SharedAccessSignatureUpdated;
+//# sourceMappingURL=results.js.map
